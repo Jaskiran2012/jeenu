@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adders - Table of Contents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .toc {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc li {
+            margin: 5px 0;
+        }
+
+        .toc a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .container-content {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid black;
+            display: inline-block;
+            background-color: #f4f4f4;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        label, button {
+            margin: 5px;
+        }
+
+        .circle-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .small-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .sum {
+            background-color: gray;
+        }
+
+        .carry {
+            background-color: gray;
+        }
+
+        .labels {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .labels div {
+            margin: 0 10px;
+        }
+
+        .legend {
+            margin-top: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h3>Table of Contents</h3>
+        <ul class="toc">
+            <li><a href="#half-adder">1. Half Adder</a></li>
+            <li><a href="#introduction">2. Introduction</a></li>
+            <li><a href="#block-diagram">3. Block Diagram</a></li>
+            <li><a href="#truth-table">4. Truth Table</a></li>
+            <li><a href="#circuit-diagram">5. Circuit Diagram</a></li>
+            <li><a href="#full-adder">7. Full Adder</a></li>
+            <li><a href="#full-adder-intro">8. Introduction</a></li>
+            <li><a href="#full-block-diagram">9. Block Diagram</a></li>
+            <li><a href="#full-truth-table">10. Truth Table</a></li>
+            <li><a href="#full-circuit-diagram">11. Circuit Diagram</a></li>
+        </ul>
+
+        <div id="half-adder" class="section">
+            <h3> Half Adder</h3>
+        </div>
+
+        <div id="introduction" class="section">
+            <h3> Introduction</h3>
+            <p>Half adder is a combinational logic circuit with two inputs and two outputs. The half adder circuit is designed to add two single bit binary numbers A and B. It is the basic building block for the addition of two single-bit numbers. This circuit has two outputs: carry and sum.</p>
+        </div>
+
+        <div id="block-diagram" class="section">
+            <h3> Block Diagram</h3>
+            <!-- Update image path accordingly -->
+            <img src="Screenshot 2025-03-09 154531.png" alt="Block Diagram" width="600">
+        </div>
+
+        <div id="truth-table" class="section">
+            <h3> Truth Table</h3>
+            <!-- Update image path accordingly -->
+            <img src="Screenshot 2025-03-09 154835.png" alt="Truth table" width="400">
+        </div>
+
+        <div id="circuit-diagram" class="section">
+            <h3> Circuit Diagram</h3>
+            <iframe src="https://circuitverse.org/simulator/embed/half-adder-1e25e2f7-53fe-4a70-9fad-c781af90ef09" width="800" height="600"></iframe>
+        </div>
+
+        <div class="container-content">
+            <div class="title">Half Adder (HA)</div>
+            <label>A: <input type="number" id="ha_a" min="0" max="1"></label>
+            <label>B: <input type="number" id="ha_b" min="0" max="1"></label>
+            <button onclick="calculateHalfAdder()">Calculate</button>
+            <div class="output">
+                <div class="circle-container">
+                    <div>Sum :</div>
+                    <div class="circle sum" id="ha_sum"></div>
+                </div>
+                <div class="circle-container">
+                    <div>Carry :</div>
+                    <div class="circle carry" id="ha_carry"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="small-circle" style="background-color: green;"></div> = 1
+            <div class="small-circle" style="background-color: red; margin-left: 20px;"></div> = 0
+        </div>
+    </div>
+    <br>
+    <hr>
+    <hr>
+    
+    <div class="container">
+        <div id="full-adder" class="section">
+            <h3> Full Adder</h3>
+        </div>
+
+        <div id="full-adder-intro" class="section">
+            <h3> Introduction</h3>
+            <p>The main difference between the Full Adder and the previously seen Half Adder is that a full adder has three inputs: the same two single-bit binary inputs A and B, and an additional Carry-In (C-in) input. The 1-bit Full Adder circuit consists of two half adders connected together and uses three Ex-OR gates, two AND gates, and one OR gate—six logic gates in total.</p>
+        </div>
+
+        <div id="full-block-diagram" class="section">
+            <h3> Block Diagram</h3>
+            <!-- Update image path accordingly -->
+            <img src="Screenshot 2025-03-09 160119.png" alt="Block Diagram" width="600">
+        </div>
+
+        <div id="full-truth-table" class="section">
+            <h3> Truth Table</h3>
+            <!-- Update image path accordingly -->
+            <img src="Screenshot 2025-03-09 160305.png" alt="Truth table" width="400">
+        </div>
+
+        <div id="full-circuit-diagram" class="section">
+            <h3> Circuit Diagram</h3>
+            <iframe src="https://circuitverse.org/simulator/embed/full-adder-675df529-72f7-4969-9c43-2b49141bac8e" width="800" height="600"></iframe>
+        </div>
+
+        <div class="container-content">
+            <div class="title">Full Adder (FA)</div>
+            <label>A: <input type="number" id="fa_a" min="0" max="1"></label>
+            <label>B: <input type="number" id="fa_b" min="0" max="1"></label>
+            <label>Carry In: <input type="number" id="fa_cin" min="0" max="1"></label>
+            <button onclick="calculateFullAdder()">Calculate</button>
+            <div class="output">
+                <div class="circle-container">
+                    <div>Sum :</div>
+                    <div class="circle sum" id="fa_sum"></div>
+                </div>
+                <div class="circle-container">
+                    <div>Carry :</div>
+                    <div class="circle carry" id="fa_carry"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="small-circle" style="background-color: green;"></div> = 1
+            <div class="small-circle" style="background-color: red; margin-left: 20px;"></div> = 0
+        </div>
+    </div>
+</div>
+
+    <script>
+        function updateCircle(id, value) {
+            let circle = document.getElementById(id);
+            circle.style.backgroundColor = value ? "green" : "red";
+        }
+
+        function calculateHalfAdder() {
+            let a = parseInt(document.getElementById('ha_a').value) || 0;
+            let b = parseInt(document.getElementById('ha_b').value) || 0;
+            let sum = a ^ b;  // XOR operation
+            let carry = a & b; // AND operation
+            updateCircle('ha_sum', sum);
+            updateCircle('ha_carry', carry);
+        }
+
+        function calculateFullAdder() {
+            let a = parseInt(document.getElementById('fa_a').value) || 0;
+            let b = parseInt(document.getElementById('fa_b').value) || 0;
+            let cin = parseInt(document.getElementById('fa_cin').value) || 0;
+            let sum = a ^ b ^ cin;  // XOR operations
+            let carry = (a & b) | (b & cin) | (a & cin); // OR and AND operations
+            updateCircle('fa_sum', sum);
+            updateCircle('fa_carry', carry);
+        }
+    </script>
+
+</body>
+</html>
