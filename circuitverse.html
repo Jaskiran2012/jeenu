@@ -7,21 +7,41 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+        }
+
+        .header, .footer {
+            background-color: #4caf50; /* Green color */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .header h1, .footer p {
+            margin: 0;
         }
 
         .container {
             max-width: 800px;
-            margin: auto;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background for container */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
         h2 {
             text-align: center;
+            color: #4caf50; /* Match header/footer green */
         }
 
         .toc {
             list-style: none;
             padding: 0;
+            text-align: left;
         }
 
         .toc li {
@@ -30,44 +50,56 @@
 
         .toc a {
             text-decoration: none;
-            color: #007bff;
+            color: #007bff; /* Bright blue */
             font-size: 18px;
         }
 
         .toc a:hover {
-            text-decoration: underline;
+            color: #0056b3; /* Darker blue hover effect */
         }
-
         .container-content {
             margin-top: 20px;
-            padding: 10px;
-            border: 1px solid black;
-            display: inline-block;
-            background-color: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            background-color: #f9f9f9; /* Soft grey */
+            border-radius: 6px;
         }
 
         .title {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .result {
-            font-weight: bold;
-            margin-top: 10px;
-            padding: 5px;
-            display: inline-block;
+            margin-bottom: 20px;
+            color: #4caf50;
         }
 
         label, button {
-            margin: 5px;
+            margin: 10px 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
         }
 
         .circle-container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            margin: 0 10px;
+            margin: 0 20px;
         }
 
         .circle {
@@ -75,9 +107,15 @@
             height: 50px;
             border-radius: 50%;
             display: inline-block;
-            margin: 10px;
         }
 
+        .legend {
+            margin-top: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .small-circle {
             width: 20px;
             height: 20px;
@@ -94,28 +132,17 @@
             background-color: gray;
         }
 
-        .labels {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .labels div {
-            margin: 0 10px;
-        }
-
-        .legend {
+        .footer {
             margin-top: 20px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>Adders - Interactive Learning</h1>
+        <h3>JASKIRAN KAUR- 2410992771</h3>
+    </div>
     
     <div class="container">
         <h3>Table of Contents</h3>
@@ -234,6 +261,9 @@
             <div class="small-circle" style="background-color: red; margin-left: 20px;"></div> = 0
         </div>
     </div>
+</div>
+<div class="footer">
+    <p>&copy; 2025 Adders Tutorial - All Rights Reserved</p>
 </div>
 
     <script>
